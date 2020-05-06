@@ -69,12 +69,13 @@ class StoryBrain {
   void restart(){
     _storyNumber = 0;
   }
+  double buttonShouldBeVisible(){
+    if([0,1,2].contains(_storyNumber)){
+      return 1.0;
+    }
+    else{
+      return 0.0;
+    }
+  }
 }
 
-
-//TODO: Step 25 - Change the _storyNumber property into a private property so that only story_brain.dart has access to it. You can do this by right clicking on the name (_storyNumber) and selecting Refactor -> Rename to make the change across all the places where it's used.
-
-
-//TODO: Step 22 - In nextStory() if the _storyNumber is equal to 3 or 4 or 5, that means it's the end of the game and it should call a method called restart() that resets the _storyNumber to 0.
-
-//TODO: Step 27 - Create a method called buttonShouldBeVisible() which checks to see if _storyNumber is 0 or 1 or 2 (when both buttons should show choices) and return true if that is the case, else it should return false.
